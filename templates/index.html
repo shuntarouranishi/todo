@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- タスクを追加するためのフォームを作成します -->
+    <form method="POST">
+      <!-- 入力フィールド。ここで新しいタスクの内容を入力します -->
+      <input type="text" name="content" id="content" placeholder="New Task" />
+      <!-- タスクを追加するための送信ボタン -->
+      <input type="submit" value="Add Task" />
+    </form>
+    <!-- タスクを表示するためのリストを作成します -->
+    <ul>
+      <!-- すべてのタスクをリストとして表示します。 -->
+      <!-- tasks変数は、Flaskアプリケーションから渡されたすべてのタスクを含みます -->
+      {% for task in tasks %}
+      <!-- 各タスクの内容を表示します -->
+      <li>{{ task.content }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
